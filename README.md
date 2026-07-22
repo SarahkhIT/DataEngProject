@@ -1,10 +1,10 @@
-# Scientific Research Atlas:
+# Research Atlas:
 
 An end-to-end AI platform that transforms scientific publications into a searchable research atlas using modern data engineering and Retrieval-Augmented Generation (RAG).
 
 ## Overview:
 
-Scientific Research Atlas continuously ingests scientific papers, validates incoming data, organizes research within a Delta Lakehouse, and enables intelligent exploration through semantic search and citation-backed AI responses.
+Research Atlas continuously ingests scientific papers, validates incoming data, organizes research within a Delta Lakehouse, and enables intelligent exploration through semantic search and citation-backed AI responses.
 
 ## Features:
 
