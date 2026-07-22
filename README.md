@@ -2,6 +2,22 @@
 
 An end-to-end AI platform that transforms scientific publications into a searchable research atlas using modern data engineering and Retrieval-Augmented Generation (RAG).
 
+## Program:
+
+Developed as part of the "Modern Data Engineering for AI Systems" program by Sdaia Academy (DAICO).
+
+**Trainer:** Mohammed Albeladi
+
+**Session Dates:** July 19th 2026 - July 23rd 2026
+
+https://github.com/SDAIAAcademy
+
+## Team:
+
+- Sarah Abdulaziz Alkhudhiri
+- Rehaf Alfaleh
+- Basma Alhindi
+
 ## Overview:
 
 Research Atlas continuously ingests scientific papers, validates incoming data, organizes research within a Delta Lakehouse, and enables intelligent exploration through semantic search and citation-backed AI responses.
@@ -54,14 +70,3 @@ RAG
 - Find recent lightweight LLM research.
 
 
-## Training Program:
-
-Developed as part of the "Modern Data Engineering for AI Systems" program by Sdaia Academy (DAICO).
-
-https://github.com/SDAIAAcademy
-
-## Team:
-
-- Sarah Abdulaziz Alkhudhiri
-- Rehaf Alfaleh
-- Basma Alhindi
