@@ -56,7 +56,7 @@ RAG
 
 ## Training Program:
 
-Developed as part of the "Modern Data Engineering for AI Systems" program by Sdaia Academy.
+Developed as part of the "Modern Data Engineering for AI Systems" program by Sdaia Academy (DAICO).
 
 https://github.com/SDAIAAcademy
 
