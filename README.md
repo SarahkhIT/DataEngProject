@@ -7,7 +7,6 @@ Developed as part of the "Modern Data Engineering for AI Systems" program by SDA
 
 *Session Dates:* July 19th 2026 - July 23rd 2026
 
-https://github.com/SDAIAAcademy
 
 ## Team:
 
