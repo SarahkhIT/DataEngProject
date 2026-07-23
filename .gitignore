@@ -18,3 +18,11 @@ env/
 # macOS / Windows
 .DS_Store
 Thumbs.db
+
+# Data & generated artifacts
+delta_lakehouse/
+chroma_db/
+great_expectations/uncommitted/
+airflow.db
+logs/
+*.parquet
