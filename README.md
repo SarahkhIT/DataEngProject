@@ -1,7 +1,7 @@
 
 ## Program:
 
-Developed as part of the "Modern Data Engineering for AI Systems" program by Sdaia Academy (DAICO).
+Developed as part of the "Modern Data Engineering for AI Systems" program by SDAIA Academy (DAICO).
 
 *Trainer:* Mohammed Albeladi
 
