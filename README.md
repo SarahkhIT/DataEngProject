@@ -1,4 +1,8 @@
 
+# Research Atlas:
+
+An end-to-end AI platform that transforms scientific publications into a searchable research atlas using modern data engineering and Retrieval-Augmented Generation (RAG).
+
 ## Program:
 
 Developed as part of the "Modern Data Engineering for AI Systems" program by SDAIA Academy (DAICO).
@@ -13,10 +17,6 @@ Developed as part of the "Modern Data Engineering for AI Systems" program by SDA
 - Sarah Abdulaziz Alkhudhiri
 - Rehaf Alfaleh
 - Basma Alhindi
-
-# Research Atlas:
-
-An end-to-end AI platform that transforms scientific publications into a searchable research atlas using modern data engineering and Retrieval-Augmented Generation (RAG).
 
 ## Overview:
 
