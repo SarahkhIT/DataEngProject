@@ -176,5 +176,3 @@ Kaggle API credentials for `kagglehub` should similarly be kept out of version c
 
 ---
 
-*Completed under the Modern Data Engineering for AI Systems training program, SDAIA Academy (delivered via Learning Space), cohort 19 Jul – 24 Jul.*
-
