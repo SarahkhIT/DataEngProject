@@ -69,20 +69,20 @@ RAG
 - Which papers discuss reinforcement learning?
 - Find recent lightweight LLM research.
   
-### Ingestion & Streaming
+## Ingestion & Streaming:
 
 - Raw arXiv metadata is validated at the ingestion boundary against an `ArxivPaperContract` **Pydantic** model (`paper_id`, `title`, `category`, `published_date`, `abstract`, `authors`), which rejects empty required fields and malformed dates.
 - A local **Apache Kafka** broker (with Zookeeper) is stood up, and validated records are published to the `arxiv_raw_topic` topic by a **Kafka producer**.
 - A **Kafka consumer** reads from that topic and routes any record that fails re-validation to a **Dead Letter Queue (DLQ)** topic, with the rejection reason recorded alongside the record.
 
 
-### Quality Gates & Lineage
+## Quality Gates & Lineage:
 
 - Every stage of the pipeline (ingestion, lakehouse, quality gate, RAG) is wrapped with a shared **OpenLineage** helper that emits **START / COMPLETE / FAIL** events to a single lineage log, giving a full audit trail of each run.
 - A **Great Expectations** checkpoint (`paper_quality_suite`) enforces column-level expectations — for example, that `title` is never null and `abstract` meets a minimum length — before data is allowed to progress from Bronze into Silver. A failing checkpoint halts the pipeline rather than letting bad data flow downstream.
 
 
-### Delta Lakehouse
+## Delta Lakehouse:
 
 Built with **Delta Lake** (via `deltalake` / PyArrow) as three layers:
 
@@ -90,7 +90,7 @@ Built with **Delta Lake** (via `deltalake` / PyArrow) as three layers:
 - **Silver** — cleaned data merged into the Bronze table using a real Delta **MERGE (upsert)** keyed on `paper_id`, so re-ingesting a paper updates its existing row instead of duplicating it.
 - **Gold** — genuine aggregates computed over Silver (e.g. paper counts and statistics by category), not a copy of the Silver table.
 
-### AI & RAG Pipeline
+## AI & RAG Pipeline:
 
 - **Chunking** — paper text is split into sentence-based, overlapping chunks (`chunk_size=2`, `overlap=1`).
 - **Vector search** — chunks are embedded with `all-MiniLM-L6-v2` and stored in a **ChromaDB** collection.
@@ -100,7 +100,7 @@ Built with **Delta Lake** (via `deltalake` / PyArrow) as three layers:
 - **Grounded generation** — the top reranked chunks are assembled into a source-numbered context and passed to **LLaMA 3.1 (8B Instant) via the Groq API**, with a prompt that requires the model to answer only from the provided sources, cite claims by source number, and explicitly say when the sources don't support an answer.
 
 
-## Prerequisites & Installation
+## Prerequisites & Installation:
 
 - Python 3.10+
 - A [Kaggle](https://www.kaggle.com) account (for `kagglehub` dataset download) with API credentials configured
@@ -126,7 +126,7 @@ tar -xzf kafka_2.12-3.6.1.tgz
 
 ---
 
-## Configuration & Secrets
+## Configuration & Secrets:
 
 The pipeline requires one secret: **`GROQ_API_KEY`**, used to authenticate with the Groq API for RAG answer generation.
 
@@ -155,7 +155,7 @@ Kaggle API credentials for `kagglehub` should similarly be kept out of version c
 
 ---
 
-## How to Run
+## How to Run:
 
 1. **Open the notebook** (Google Colab recommended, since it uses `google.colab.userdata` for secrets).
 2. **Install dependencies** — run the setup/pip-install cell first.
@@ -169,7 +169,7 @@ Kaggle API credentials for `kagglehub` should similarly be kept out of version c
 
 ---
 
-## References
+## References:
 
 - [SDAIA Academy on GitHub](https://github.com/SDAIAAcademy)
 - Dataset: [Cornell University arXiv Dataset (Kaggle)](https://www.kaggle.com/datasets/Cornell-University/arxiv)
