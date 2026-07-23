@@ -168,6 +168,15 @@ Kaggle API credentials for `kagglehub` should similarly be kept out of version c
 9. **Test the RAG pipeline** by calling `generate_rag_answer_groq("<your question>")` (or the lineage-tracked wrapper shown in the notebook) and reviewing the cited, grounded answer along with its `Sources` section.
 
 ---
+## Note on notebook structure
+
+The pipeline was originally developed and executed as a single notebook.
+For clearer version control and commit history, it has been split into
+6 files under `notebooks/`, organized by pipeline stage. These notebooks
+are meant to be read/reviewed in order (00 → 05) and reflect the original
+single run's captured output. Running a later notebook (e.g. 05) on its
+own, without first running the earlier ones in the same session, will
+raise errors due to missing variables from prior stages.
 
 ## References:
 
