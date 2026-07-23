@@ -38,10 +38,17 @@ Research Atlas continuously ingests scientific papers, validates incoming data, 
 
 - Python
 - Apache Kafka
-- Apache Spark
 - Delta Lake
 - Great Expectations
 - Apache Airflow
+- Pydantic (data contracts / schema validation)
+- OpenLineage (pipeline lineage tracking)
+- ChromaDB (vector store)
+- Sentence-Transformers (embeddings + cross-encoder reranking)
+- BM25 / rank_bm25 (keyword search)
+- Groq API (LLaMA 3.1 — RAG answer generation)
+- PyArrow (Delta Lake schema enforcement)
+- Pandas
 
 ## Pipeline:
 
